@@ -1,0 +1,108 @@
+.footer {
+    background-color: #2f303a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    gap: 70px;
+    position: absolute;
+  }
+  
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .footer-list {
+    margin-top: 20px;
+    margin-right: 70px;
+  }
+  
+  .footer-item {
+    @include font(400, 14px, 1.71, 0.03em);
+    font-style: normal;
+  }
+  
+  .footer-soc-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-address {
+    color: var(--footer-text-color);
+  }
+  
+  .footer-mail {
+    color: var(--top-footer-text);
+  }
+  
+  .footer-tel {
+    color: var(--top-footer-text);
+  }
+  
+  .footer-color-text {
+    color: var(--footer-text-color);
+  }
+  
+  .footer-soc-container {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  }
+  
+  .soc-list-title {
+    display: flex;
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--footer-text-color);
+    margin-bottom: 20px;
+  }
+  
+  .footer-soc-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-right: 93px;
+  }
+  
+  .footer-soc-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,  
+    &:focus {
+      background-color: var(--top-adress-color);
+    }
+  }
+  
+  .footer-soc-icon {
+    fill: #FFFFFF ;
+  }
+  
+  .footer-sign-container {
+    width: 570px;
+    max-height: 86px;
+  }
+  
+  .footer-sign-title {
+    display: flex;
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--footer-text-color);
+    padding-bottom: 20px;
+  }
+  
+  .footer-form {
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    align-items: flex-end;
+  }
+  
+  .footer-sign-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
