@@ -1,10 +1,10 @@
 .activity {
     padding-bottom: 94px;
-  }
-
-  .activity__activity--position {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1199px) {
+      display: none;      
+    }
   }
 
   .activity__title {

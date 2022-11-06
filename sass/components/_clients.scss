@@ -12,15 +12,28 @@
   
   .clients-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
   
   .clients__item {
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 30px) / 2);
+    @include tablet {
+      width: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+      width: calc((100% - 150px) / 6);
+    }
   }
   
   .clients-link {
-    width: 170px;
+    width: 210px;
+    @include tablet {
+      width: 226px;
+    }
+    @include desktop {
+      width: 170px;
+    }
     height: 92px;
     display: flex;
     border: 1px solid #AFB1B8;
