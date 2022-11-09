@@ -14,17 +14,17 @@
     margin-bottom: 50px;
   }
   
-  .activity__list {
+  .services-list {
     display: flex;
     gap: 30px;
   }
   
-  .activity__item {
+  .services-list__item {
     width: calc((100% - 60px) / 3);
     position: relative;
   }
   
-  .activity__top-title {
+  .services-list__title {
     position: absolute;
     bottom: 0;
     @include font(700, 14px, 1.16, 0.03em);

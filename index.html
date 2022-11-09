@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./CSS/main.min.css" />
   </head>
   <body>
-   <!-- <header class="header">
+   <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo navigation__logo link" href="/index.html" lang="en"
@@ -58,8 +58,69 @@
             </li>
           </ul>
         </div>
+        <button type="button" class="menu-open-btn">o</button>
       </div>
-    </header>-->
+      <div class="container">
+      <div class="mob-menu">
+        <button type="button" class="menu-close-btn">x</button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu__item">
+            <a class="mob-menu__link link current" href="">Студія</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link link" href="">Контакти</a>
+          </li>
+        </ul>
+        <div class="mob-connect">
+        <ul class="mob-menu-list list">
+          <li class="mob-menu__item">
+            <a class="mob-connect__tel link" href="tel:+380961111111"
+              >+38 096 111 11 11</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-connect__contacts link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mob-soc">
+        <ul class="mob-soc-list list">
+          <li class="mob-soc-item">
+            <a 
+            class="mob-soc-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer nofollow">Instagram</a>
+          </li>
+          <li class="mob-soc-item">
+            <a 
+            class="mob-soc-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer nofollow">Twitter</a>
+          </li>
+          <li class="mob-soc-item">
+            <a 
+            class="mob-soc-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer nofollow">Facebook</a>
+          </li>
+          <li class="mob-soc-item">
+            <a 
+            class="mob-soc-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer nofollow">Linkedin</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    </header>
     <main>
       <section class="hero">
         <div class="hero__container">
@@ -126,18 +187,24 @@
       <section class="activity">
         <div class="container">
           <h2 class="activity__title">Чим ми займаємося</h2>
-          <ul class="activity__list">
-            <li class="activity__item list">
-              <img src="./images/img.jpg" alt="Верстка" width="370" />
-              <h2 class="activity__top-title">ДEСКТОПНІ ДОДАТКИ</h2>
+          <ul class="services-list">
+            <li class="services-list__item list">
+              <img 
+              srcset="./images/img.jpg 1x, ./images/img1-opt-2x.jpg 2x"
+              src="./images/img.jpg" alt="Верстка" width="370" />
+              <h2 class="services-list__title">ДEСКТОПНІ ДОДАТКИ</h2>
             </li>
-            <li class="activity__item list">
-              <img src="./images/img1.jpg" alt="Інтерфейс" width="370" />
-              <h2 class="activity__top-title">МОБІЛЬНІ ДОДАТКИ</h2>
+            <li class="services-list__item list">
+              <img 
+              srcset="./images/img1.jpg 1x, ./images/img2-opt-2x.jpg 2x"
+              src="./images/img1.jpg" alt="Інтерфейс" width="370" />
+              <h2 class="services-list__title">МОБІЛЬНІ ДОДАТКИ</h2>
             </li>
-            <li class="activity__item list">
-              <img src="./images/img2.jpg" alt="Дизайн" width="370" />
-              <h2 class="activity__top-title">ДИЗАЙНЕРСЬКІ РІШЕННЯ</h2>
+            <li class="services-list__item list">
+              <img 
+              srcset="./images/img2.jpg 1x, ./images/img3-opt-2x.jpg 2x"
+              src="./images/img2.jpg" alt="Дизайн" width="370" />
+              <h2 class="services-list__title">ДИЗАЙНЕРСЬКІ РІШЕННЯ</h2>
             </li>
           </ul>
         </div>
@@ -147,11 +214,25 @@
           <h2 class="team__top-title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item list">
-              <img
-                src="./images/photo1.jpg"
+              <picture>
+                <source
+                srcset="./images/photo1-opt.jpg 1x, ./images/photo1-opt-2x.jpg 2x"
+                media="(min-width: 1200px)"
+                >
+                <source
+                srcset="./images/photo1-opt-tab.jpg 1x, ./images/photo1-opt-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                >
+                <source
+                srcset="./images/photo1-opt-mob.jpg 1x, ./images/photo1-opt-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                >
+                <img
+                src="./images/photo1-opt.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
+                width="450"
               />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
@@ -196,7 +277,23 @@
               </div>
             </li>
             <li class="team__item list">
-              <img src="./images/photo2.jpg" alt="Ольга Рєпіна" width="270" />
+              <picture>
+                <source
+                srcset="./images/photo2-opt.jpg 1x, ./images/photo2-opt-2x.jpg 2x"
+                media="(min-width: 1200px)"
+                >
+                <source
+                srcset="./images/photo2-opt-tab.jpg 1x, ./images/photo2-opt-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                >
+                <source
+                srcset="./images/photo2-opt-mob.jpg 1x, ./images/photo2-opt-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                >
+                <img src="./images/photo2-opt.jpg" alt="Ольга Рєпіна"
+                width="450"
+              />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -241,7 +338,23 @@
               </div>
             </li>
             <li class="team__item list">
-              <img src="./images/photo3.jpg" alt="Микола Тарасов" width="270" />
+              <picture>
+                <source
+                srcset="./images/photo3-opt.jpg 1x, ./images/photo3-opt-2x.jpg 2x"
+                media="(min-width: 1200px)"
+                >
+                <source
+                srcset="./images/photo3-opt-tab.jpg 1x, ./images/photo3-opt-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                >
+                <source
+                srcset="./images/photo3-opt-mob.jpg 1x, ./images/photo3-opt-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                >
+                <img src="./images/photo3-opt.jpg" alt="Микола Тарасов"
+                width="450"
+              />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -286,11 +399,25 @@
               </div>
             </li>
             <li class="team__item list">
-              <img
-                src="./images/photo4.jpg"
+              <picture>
+                <source
+                srcset="./images/photo4-opt.jpg 1x, ./images/photo4-opt-2x.jpg 2x"
+                media="(min-width: 1200px)"
+                >
+                <source
+                srcset="./images/photo4-opt-tab.jpg 1x, ./images/photo4-opt-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                >
+                <source
+                srcset="./images/photo4-opt-mob.jpg 1x, ./images/photo4-opt-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                >
+                <img
+                src="./images/photo4-opt.jpg"
                 alt="Михайло Єрмаков"
-                width="270"
+                width="450"
               />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
