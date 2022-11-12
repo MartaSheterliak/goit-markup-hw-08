@@ -1,15 +1,31 @@
 .footer {
     background-color: #2f303a;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    @include tablet {
+      padding-top: 60px;
+      padding-bottom: 60px;      
+    }
+    @include desktop {
+      padding-top: 60px;
+      padding-bottom: 60px;      
+    }
     display: flex;
     gap: 70px;
-    position: absolute;
   }
   
   .footer-container {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      justify-content: space-between;
+      flex-wrap: wrap;   
+      align-items: center; 
+    }
     display: flex;
     align-items: baseline;
+  }
+
+  .footer-agress-container {
+    @media screen and (max-width: 767px) {
+      display: none;      
+    }
   }
   
   .footer-list {
@@ -45,6 +61,9 @@
   }
   
   .footer-soc-container {
+    @media screen and (max-width: 767px) {
+      display: none;      
+    }
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   }
   
@@ -59,6 +78,7 @@
   .footer-soc-list {
     display: flex;
     gap: 10px;
+    justify-content: center;
     margin-top: 20px;
     margin-right: 93px;
   }
@@ -81,12 +101,19 @@
   }
   
   .footer-sign-container {
+    @media screen and (max-width: 767px) {
+      display: none;      
+    }
     width: 570px;
     max-height: 86px;
   }
   
   .footer-sign-title {
     display: flex;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      justify-content: center;
+      margin-top: 60px;
+    }
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--footer-text-color);
@@ -105,4 +132,85 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    }
   }
+
+  .mob-footer-agress-container {
+    @include tablet {
+      display: none;     
+      }
+    @include desktop {
+    display: none;     
+    }
+  }
+
+  .mob-footer-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .mob-footer-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .mob-soc-list-title {
+    margin-top: 60px;
+    display: flex;
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--footer-text-color);
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .mob-footer-soc-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .mob-footer-sign-title {
+    display: flex;
+    justify-content: center;
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--footer-text-color);
+    padding-bottom: 20px;
+  }
+
+  .mob-footer-sign-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .mob-modal-sign-input{
+    width: 450px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #2f303a;
+    border-radius: 4px;
+    outline: transparent;
+}

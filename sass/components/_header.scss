@@ -24,11 +24,14 @@
 }
   
 .navigation__logo,
-.footer-logo {
+.footer-logo,
+.mob-footer-logo {
   font-family: "Raleway", sans-serif;
   @include font(700, 26px, 1.19, 0.03em);
   color: var(--top-adress-color);
-  margin-right: 93px;
+  @include desktop {
+    margin-right: 93px;
+  }
 }
   
 .header-color-text {
