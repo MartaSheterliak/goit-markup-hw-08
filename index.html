@@ -40,7 +40,7 @@
           </ul>
         </nav>
         <div class="connect header__connect">
-          <ul class="menu list">
+          <ul class="menu-contact list">
             <li class="menu__item">
               <a class="connect__contacts link" href="mailto:info@devstudio.com"
                 ><svg class="connect__contacts-icon" width="16" height="12">
@@ -58,11 +58,20 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="menu-open-btn" data-menu-open>o</button>
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="mob-menu-icon" width="40" height="40">
+          <use
+            href="./images/symbol-defs1.svg#icon-menu_open"
+          ></use></svg></button>
       </div>
       <div class="container">
       <div class="mob-menu is-hidden" data-menu>
-        <button type="button" class="menu-close-btn" data-menu-close>x</button>
+        <button type="button" class="menu-close-btn" data-menu-close>
+          <svg class="mob-menu-icon" width="40" height="40">
+            <use
+              href="./images/symbol-defs1.svg#icon-menu_close"
+            ></use></svg>
+        </button>
         <ul class="mob-menu-list list">
           <li class="mob-menu__item">
             <a class="mob-menu__link link current" href="">Студія</a>
@@ -75,7 +84,7 @@
           </li>
         </ul>
         <div class="mob-connect">
-        <ul class="mob-menu-list list">
+        <ul class="mob-connect-list list">
           <li class="mob-menu__item">
             <a class="mob-connect__tel link" href="tel:+380961111111"
               >+38 096 111 11 11</a>
@@ -514,7 +523,7 @@
         </div>
       </section>
     </main>
-    <!--<footer class="footer">
+    <footer class="footer">
       <div class="footer-container container">
         <div class="footer-agress-container">
           <a class="footer-logo link" href="/index.html" lang="en"
@@ -587,7 +596,7 @@
         </div>
       </div>
     </footer>-->
-    <!--<div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-btn" data-modal-close>
           <svg class="modal-close-icon" width="18" height="18">
@@ -640,7 +649,6 @@
           <button class="submit-btn" data-modal-open type="submit">Відправити</button>
         </form>
       </div>
-    </div>-->
+    </div>
     <script src="./js/modal.js"></script>
   </body>
-</
